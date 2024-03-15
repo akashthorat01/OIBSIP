@@ -1,0 +1,129 @@
+*{
+    margin: 0%;
+}
+
+body{
+    /* background-image: url(https://wallpapers.com/images/featured/space-sjryfre8k8f6i3ge.jpghttps://wallpapers.com/images/featured/space-sjryfre8k8f6i3ge.jpg); */
+    background-color: black;
+}
+
+
+
+.home{
+    height: 100vh;
+    width: 100%;
+    float: left;
+    background-color:rgb(4, 102, 199);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.home_info{
+    height: 600px;
+    width: 70%;
+    /* float: left; */
+    background: linear-gradient(45deg, #090131, #000000);
+    box-shadow: -60px 50px 40px 0px rgb(31, 31, 92);
+}
+
+header{
+    height: 47px;
+    width: 100%;
+    float: left;
+    /* background-color: aliceblue; */
+    margin-top: 30px;
+}
+
+.h__logo{
+    height: 100%;
+    width: 40%;
+    float: left;
+    background-color: #090131;
+}
+.h__logo img{
+    height: 50px;
+    width: 50px;
+    margin-left: 50px;
+}
+
+.h__logo img:hover{
+    /* background-color: aqua; */
+}
+
+.h_list{
+    height: 100%;
+    width: 60%;
+    float: left;
+    /* display: inline-block; */
+    background-color: #090131;
+}
+.h_list li{
+    color: aliceblue;
+    display: inline-block;
+    margin-left: 55px;
+    margin-top: 15px;
+}
+.h_list li:hover{
+    color: dodgerblue;
+}
+
+
+
+
+
+.about{
+    height: 500px;
+    width: 50%;
+    float: left;
+    /* background-color: aqua; */
+    color: aliceblue;
+}
+
+.about h1{
+    font-size: 50px;
+    margin-left: 50px;
+}
+.a1{
+    margin-top: 50px;
+    color: dodgerblue;
+}
+.a2{
+    color: dodgerblue;
+}
+.about p{
+    margin-left: 50px;
+}
+input{
+    margin-left: 50px;
+    height: 30px;
+    width: 200px;
+    /* border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%; */
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+}
+button{
+    height: 30px;
+    width: 70px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color:dodgerblue;
+}
+
+
+.about_img{
+    height: 500px;
+    width: 50%;
+    float: left;
+    /* background-color: rebeccapurple; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.about_img img{
+    height: 450px;
+}
