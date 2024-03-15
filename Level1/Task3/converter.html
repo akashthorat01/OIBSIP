@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Add custom styles here */
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background: linear-gradient(45deg, #8003b1 0%, #0502b8 100%); */
+            background: linear-gradient(45deg, #08001f, #30197d);
+            background-repeat: no-repeat;
+            text-align: center;
+            position: relative;
+        }
+
+        .container {
+            height: 300px;
+            width: 1000px;
+            float: left;
+            /* background: linear-gradient(45deg, #00d9ff 0%, #ff00b3 100%);  */
+            backdrop-filter: blur(50px);
+            background: rgba(235, 0, 255, 0.11);
+        }
+
+
+        .converter {
+            width: 1000px;
+            height: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .converter::before {
+            content: '';
+            width: 300px;
+            height: 300px;
+            background: #f41b75;
+            border-radius: 5px;
+            position: absolute;
+            left: -100px;
+            top: -100px;
+            z-index: -1;
+        }
+
+        .converter::after {
+            content: '';
+            width: 300px;
+            height: 300px;
+            background: #419aff;
+            border-radius: 50%;
+            position: absolute;
+            right: -100px;
+            bottom: -100px;
+            z-index: -1;
+        }
+
+
+
+
+
+
+        h2 {
+            font-size: 45px;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        label {
+            font-size: 20px;
+            color: aliceblue;
+        }
+        #lbl1{
+            margin-left: 30px;
+        }
+        
+
+        input {
+            height: 30px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 30px;
+            background-color:cadetblue;
+            border-bottom: 1px solid aliceblue;
+            color: black;
+            font-size: 15px;
+        }
+
+        #celsius{
+            margin-left: 10px;
+        }
+        #fahrenheit{
+            margin-left: 10px;
+        }
+
+
+        button {
+            height: 35px;
+            width: 150px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 50px;
+        }
+
+        #btn1:hover {
+            background-color: #f41b75;
+        }
+        #btn2:hover {
+            background-color: #419aff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="converter">
+        <div class="container mt-5">
+            <h2>Temperature Converter</h2>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label id="lbl1" for="celsius">Celsius:</label>
+                        <input type="number" class="form-control" id="celsius">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label id="lbl2" for="fahrenheit">Fahrenheit:</label>
+                        <input type="number" class="form-control" id="fahrenheit">
+                    </div>
+                </div>
+            </div>
+            <button id="btn1" class="btn btn-primary" onclick="convertToFahrenheit()">Convert to Fahrenheit</button>
+            <button id="btn2" class="btn btn-primary" onclick="convertToCelsius()">Convert to Celsius</button>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function convertToFahrenheit() {
+            var celsius = parseFloat(document.getElementById("celsius").value);
+            var fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById("fahrenheit").value = fahrenheit.toFixed(2);
+        }
+
+        function convertToCelsius() {
+            var fahrenheit = parseFloat(document.getElementById("fahrenheit").value);
+            var celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById("celsius").value = celsius.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
